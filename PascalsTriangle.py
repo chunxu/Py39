@@ -25,4 +25,4 @@ def PascalsT(n):
             i = i + 1
     return mylist    
 
-            
+ #IndexError('list assignment index out of range')           
