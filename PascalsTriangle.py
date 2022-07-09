@@ -26,3 +26,4 @@ def PascalsT(n):
     return mylist    
 
  #IndexError('list assignment index out of range')           
+# not allowed to set list value out of current index
