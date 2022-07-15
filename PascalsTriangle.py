@@ -13,17 +13,21 @@ def PascalsT(n):
     elif n ==1:
         return [[1]]
     else:
-        mylist[0] = [1]
-        mylist[1] = [1,1]
+        mylist.append([1])
+        mylist.append([1,1])   
         i = 2
         while i < n:
-            mylist[i][0] = mylist[i][-1] = 1
-            j = 1
-            while j <= n/2:
-                mylist[i][j] = mylist[i][-j-1] = mylist[i-1][j-1] + mylist[i-1][j]
-                j = j + 1
-            i = i + 1
-    return mylist    
+            j = len(mylist)
+            while j<n:
+                new_item=list()
+                new_item.append(1)
+                for x in range(0,j-1):
+                    new_item.append(mylist[i-1][x]+mylist[i-1][x+1])
+                new_item.append(1)
+                j=j+1
+            mylist.append(new_item)
+            i=i+1
+        return (mylist)       
 
  #IndexError('list assignment index out of range')           
 # not allowed to set list value out of current index
