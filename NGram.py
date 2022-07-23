@@ -8,3 +8,16 @@
 # NGram("abc", 4) returns [   ]
 # NGram("abc", 1) returns ["a", "b", "c"]
 
+def NGram(s,n):
+    charlist=list(s)
+    newlist=[]
+    if n>len(charlist):
+        return newlist
+    else:
+        for i in range(0,len(charlist)-n+1):
+            newstring=""
+            for j in range(i,n+i):#move index to the start of str
+                newstring+=charlist[j]
+            newlist.append(newstring)
+        return newlist
+    
