@@ -8,3 +8,11 @@
 # ValidParenthesis("()()()(") returns False
 # ValidParenthesis("((())))") returns False
 
+def ValidParenthesis(s):
+    if len(s)%2!=0:
+        return False
+    else:
+        if s.count('(') == s.count(')'):
+            return True
+        else:
+            return False
