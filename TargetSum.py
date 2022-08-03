@@ -7,3 +7,25 @@
 # TargetSum([1, 2, 5, 9, 8, 11], 11) returns [1, 3]
 # TargetSum([1, 2, 5, 9, 8, 11], 5) returns -1
 # TargetSum([1, 2, 5, 9, 8, 11], 14) returns [2, 3]
+
+def TargetSum(mylist, target):
+    i = 0
+    while i<len(mylist):
+        j=i+1
+        while j<len(mylist):
+            if mylist[i]+mylist[j] == target:
+                return [i,j]
+                break
+            else:
+                j +=1
+                continue
+        if j==len(mylist):
+            i =+1
+            continue
+        else:
+            break
+    if i == len(mylist):
+        return -1
+      
+      
+  #System is busy. Please try later.
