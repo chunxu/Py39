@@ -35,3 +35,23 @@
 # too many rounds of loops included
 
 
+#working code below:
+def PascalsT(n):
+    mylist = list()
+    if n < 1:
+        return "error"
+    elif n ==1:
+        return [[1]]
+    else:
+        mylist.append([1])
+        mylist.append([1,1])   
+        i = 2
+        while i < n:
+            new_item=list()
+            new_item.append(1)
+            for x in range(0,i-1):
+                new_item.append(mylist[i-1][x]+mylist[i-1][x+1])
+            new_item.append(1)
+            mylist.append(new_item)
+            i=i+1
+        return (mylist)       
