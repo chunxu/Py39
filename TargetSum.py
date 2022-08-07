@@ -29,3 +29,26 @@ def TargetSum(mylist, target):
       
       
   #System is busy. Please try later. Maybe due to infinite loop.
+def TargetSum(mylist, target):
+    i = 0
+    value=[]
+    while i<len(mylist):
+        j=i+1
+        while j<len(mylist):
+            if mylist[i]+mylist[j] == target:
+                value.append(i)
+                value.append(j)
+                #break
+                return value
+            else:
+                j +=1
+                #continue
+        if j==len(mylist):
+            i +=1
+            continue
+        else:
+            break
+    if i == len(mylist):
+        return -1
+
+    
