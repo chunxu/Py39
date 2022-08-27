@@ -1,4 +1,3 @@
-#
 # Description
 # Build a function AllRed that takes a list of strings as input, returns a boolean indicating whether all the strings containing word "red".
 
